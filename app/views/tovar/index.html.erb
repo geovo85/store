@@ -1,0 +1,20 @@
+<p>На сегодня:</p>
+
+<table border = "1">
+	<% @tovars.each do |tovar| %>
+		<tr>
+			<td><%= tovar.name %><td>
+			<td><%= tovar.article %><td>
+			<td><%= tovar.comment %><td>
+			<td><%= tovar.created_at %><td>
+			<td><%= tovar.updated_at %><td>			
+			<td><%= link_to 'подробно', tovar_path( tovar ) %><td>
+			<td><%= link_to 'редактировать', edit_tovar_path( tovar ) %><td>
+			<td><%= link_to 'удалить', 
+							tovar_path(tovar), 
+							method: :delete %><td>
+		<tr/>
+	<% end %>
+<table/>
+
+<p><%= link_to 'добавить', new_tovar_path %><p/>

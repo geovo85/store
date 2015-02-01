@@ -1,0 +1,17 @@
+<%= params %>
+
+<%= @tovar %>
+<h2>Cведения о товаре</h2>
+
+<table border="1">
+	<tr><td>Наименование</td>
+		<td><%= @tovar.name %></td></tr>
+	<tr><td>Артикул</td>
+		<td><%= @tovar.article %></td></tr>
+	<tr><td>Примечание</td>
+		<td><%= @tovar.comment %></td></tr>
+</table>
+
+<p><%= link_to 'Редактировать', edit_tovar_path(@tovar) %></p>
+
+<p><%= link_to 'Назад к списку', tovar_index_path %></p>
