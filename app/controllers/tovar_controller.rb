@@ -23,7 +23,8 @@ class TovarController < ApplicationController
   	@tovar.name    = str_simpl( params[:tovar][:name] )
   	@tovar.article = str_simpl( params[:tovar][:article] )	
   	@tovar.comment = str_simpl( params[:tovar][:comment] )
-  	@tovar.save
+  	@tovar.hidden  = params[:tovar][:hidden]
+    @tovar.save
   	render :show
   end
 

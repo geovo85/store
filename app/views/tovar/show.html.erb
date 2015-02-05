@@ -10,6 +10,8 @@
 		<td><%= @tovar.article %></td></tr>
 	<tr><td>Примечание</td>
 		<td><%= @tovar.comment %></td></tr>
+	<tr><td>Скрытый</td>
+		<td><%= @tovar.hidden %></td></tr>
 </table>
 
 <p><%= link_to 'Редактировать', edit_tovar_path(@tovar) %></p>
